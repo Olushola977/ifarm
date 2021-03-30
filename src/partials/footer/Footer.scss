@@ -1,0 +1,26 @@
+@import 'styles/compiled.scss';
+
+#footer {
+    background: $DarkPrimaryColor;
+    padding: 60px 20px 10px 20px;
+    color: $White;
+    font-size: 14px;
+}
+.copyright {
+    border-top: 2px solid $Grey;
+}
+.footerHeader {
+    h4 {
+        font-size: 20px;
+        font-weight: 700;
+    }
+}
+.footerLink {
+    ul {
+        li {
+            a {
+                color: $White;
+            }
+        }
+    }
+}

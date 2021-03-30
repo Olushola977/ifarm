@@ -1,0 +1,8 @@
+@import 'styles/compiled.scss';
+
+.productTitle {
+    h4 {
+        font-size: to-rem(16px);
+        font-weight: 500;
+    }
+}

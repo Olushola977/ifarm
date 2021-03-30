@@ -1,0 +1,14 @@
+.productCardContainer {
+    
+    .imgContainer {
+        width: to-rem(150px);
+        height: to-rem(150px);
+        border-radius: 50%;
+    }
+
+    .productInfo {
+        width: auto;
+        height: auto;
+        border-radius: to-rem(10px);
+    }
+}
