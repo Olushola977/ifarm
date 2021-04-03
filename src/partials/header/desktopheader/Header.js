@@ -2,6 +2,7 @@
 import Brand from 'partials/brand';
 import './Header.scss';
 import { Link } from 'react-router-dom';
+import Modal from 'utils/modal';
 
 /**
  * Header Component

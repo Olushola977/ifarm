@@ -6,3 +6,16 @@
         font-weight: 500;
     }
 }
+.slick-slider {
+    button {
+        z-index: 1;
+    }
+}
+.slick-prev, .slick-next {
+    &::before{
+        color: $Warning;
+    }
+}
+.slick-prev:before, .slick-next:before {
+    font-size: 30px;
+}

@@ -9,7 +9,7 @@ function Product({ sidebar, children }) {
     return (
         <>
             {sidebar ? (
-                <div className="container-fluid my-3">
+                <div className="container my-3">
                     <div className="row">
                         <div className="col-lg-3">
                             {sidebar}
@@ -20,7 +20,7 @@ function Product({ sidebar, children }) {
                     </div>
                 </div>
             ) : (
-                <div className="container-fluid bgGrey my-3">
+                <div className="container bgGrey my-3">
                     <div className="py-4">{children}</div>
                 </div>
             )

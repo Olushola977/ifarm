@@ -2,41 +2,48 @@ import { Tomato, Banana } from './ProductImage';
 
 const Crops = {
     category: "Crops",
-    subCategories: [
+    products: [
         {
             title: "Tomato",
-            products: [
-                {
-                    productName: "Red Tomato",
-                    ProductImg: `${Tomato}`
-                }
-            ]
+            productName: "Red Tomato",
+            productImg: `${Tomato}`
+        },
+
+        {
+            title: "Banana",
+            productName: "Ripe Banana",
+            productImg: `${Banana}`
+        },
+        {
+            title: "Tomato",
+            productName: "Red Tomato",
+            productImg: `${Tomato}`
         },
         {
             title: "Banana",
-            products: [
-                {
-                    productName: "Ripe Tomato",
-                    ProductImg: `${Banana}`
-                }
-            ]
+            productName: "Ripe Banana",
+            productImg: `${Banana}`
         },
         {
-            title: "Corn",
-            products: [
-                {
-
-                }
-            ]
+            title: "Tomato",
+            productName: "Red Tomato",
+            productImg: `${Tomato}`
         },
         {
-            title: "Soyabeans",
-            products: [
-                {
-
-                }
-            ]
-        }
+            title: "Banana",
+            productName: "Ripe Banana",
+            productImg: `${Banana}`
+        },
+        {
+            title: "Tomato",
+            productName: "Red Tomato",
+            productImg: `${Tomato}`
+        },
+        {
+            title: "Banana",
+            productName: "Ripe Banana",
+            productImg: `${Banana}`
+        },
     ]
 }
 export default Crops

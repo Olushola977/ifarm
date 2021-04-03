@@ -16,7 +16,7 @@ function AuthWrapper({
     linkcolor
 }) {
     return (
-        <div className="container my-5">
+        <div className="container py-5">
             <div className="row">
                 <div className="col-lg-6 mx-auto my-0">
                     <div className="authHeader text-center">
