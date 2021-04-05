@@ -5,12 +5,16 @@ import './Input.scss';
  */
 
 
-function Input({ type, placeholder }) {
+function Input({
+    type,
+    placeholder,
+    id
+}) {
 
     return (
         <div className="mt-4">
             <input
-                id="input"
+                id={id}
                 type={type}
                 className="form-control"
                 placeholder={placeholder}

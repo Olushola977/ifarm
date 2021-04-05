@@ -10,7 +10,8 @@ function ProductCard({
     productImg,
     productName,
     mx,
-    color
+    color,
+    children
 }) {
     return (
         <div className={`${column} ${mx}`} style={{ background: `${color}` }} >
@@ -20,6 +21,7 @@ function ProductCard({
                 </div>
                 <div className="productInfo p-3">
                     <p> {productName} </p>
+                    {children}
                 </div>
             </div>
         </div>

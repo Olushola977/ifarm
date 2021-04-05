@@ -6,6 +6,8 @@ import CategoryWrapper from 'components/categorywrapper';
 import About from 'components/about';
 import Services from 'components/services';
 import Farms from 'components/farms';
+import Contact from 'components/contact';
+import NotFound from 'components/notfound';
 
 /**
  * Base Page Layout
@@ -20,8 +22,9 @@ function PageLayout() {
                 <Route path="/ifarm/about" exact component={About} />
                 <Route path="/ifarm/services" exact component={Services} />
                 <Route path="/ifarm/farms" exact component={Farms} />
+                <Route path="/ifarm/contact-us" exact component={Contact} />
                 <Route path="/category/*" exact component={CategoryWrapper} />
-                <Route path="*" component={() => <div>Not Found</div>} />
+                <Route path="*" component={NotFound} />
             </Switch>
         <Footer />
         </>

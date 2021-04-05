@@ -5,6 +5,7 @@ const Crops = {
     products: [
         {
             title: "Tomato",
+            price: "50",
             productName: "Red Tomato",
             productImg: `${Tomato}`
         },

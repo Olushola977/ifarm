@@ -4,19 +4,33 @@
  * Button Component
  */
 
-function Button({bg, colour, fontsize, fontweight, name}) {
+function Button({
+    bg,
+    width,
+    colour,
+    fontsize,
+    fontweight,
+    name,
+    mx,
+    ...rest
+}) {
     return (
         <div className="mt-4">
-            <button 
-                className="form-control" 
+            <button
+                className={`form-control ${mx}`}
+                id= {name}
+                {...rest}
                 style=
                 {{
-                    background: `${bg}`, 
-                    color: `${colour}`, 
-                    fontSize: `${fontsize}`, 
+                    background: `${bg}`,
+                    color: `${colour}`,
+                    fontSize: `${fontsize}`,
                     fontWeight: `${fontweight}`,
+                    width: `${width}`,
+                    border: "none",
+                    boxShadow: "none"
                 }}>
-                    {name}
+                {name}
             </button>
         </div>
     )

@@ -22,10 +22,12 @@ function Login() {
                 <div className="form-group py-2">
                     <form>
                             <Input 
+                                id="loginusernameinput"
                                 type="name"
                                 placeholder="Username"
                             />
                             <Input 
+                                id="loginpasswordinput"
                                 type="password"
                                 placeholder="Password"
                             />

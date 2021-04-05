@@ -21,24 +21,29 @@ function Signup() {
             <div className="form-group py-2">
                 <form>
                 <Input
+                    id="signupemailinput"
                         type="email"
                         placeholder="Email"
                     />
                     <div className="d-flex justify-content-between">
                         <Input
+                            id="signupfirstnameinput"
                             type="name"
                             placeholder="FirstName"
                         />
                         <Input
+                            id="signuplastnameinput"
                             type="name"
                             placeholder="LastName"
                         />
                     </div>
                     <Input
+                        id="signupfirstpasswordinput"
                         type="password"
                         placeholder="Password"
                     />
                     <Input
+                        id="signupsecondpasswordinput"
                         type="password"
                         placeholder="Re-type Password"
                     />

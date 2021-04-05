@@ -1,1 +1,15 @@
 @import 'styles/compiled.scss';
+
+.show {
+    display: block;
+}
+.modal {
+    background: #1d1d1db8;
+}
+.close {
+    span {
+        float: right !important;
+        color: #ea0404f7;
+        text-shadow: 0 1px 0 #848181;
+    }
+}

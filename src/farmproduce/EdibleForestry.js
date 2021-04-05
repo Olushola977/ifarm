@@ -1,7 +1,7 @@
 import { Tomato, Banana } from './ProductImage';
 
 const EdibleForestry = {
-    category: "Livestock",
+    category: "Edible Forestry",
     products: [
         {
             title: "Tomato",
