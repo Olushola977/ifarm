@@ -23,8 +23,20 @@ function FarmProducts() {
 
     let [display, setDisplay] = useState(false);
 
-    const handleModalContent = () => {
+    const getProductDetail = (id) => {
+        Product.forEach((element) => {
+            const prodDetail = element.products.find((prod) => prod.id == id);
+            console.log(prodDetail, "prod detail");
+            return prodDetail;
+        });
+    }
+
+    const handleModalContent = (e) => {
         handleModalOpen();
+        const id = e.target.id;
+        console.log(id, "id");
+        const singleProduct = getProductDetail(id);
+        console.log(singleProduct, "single product");
     }
 
     const handleModalOpen = () => {
@@ -65,6 +77,7 @@ function FarmProducts() {
                                     colour="#fff"
                                     name="Pick"
                                     bg="#FF9A14"
+                                    id={prodsub.id}
                                     fontsize="14px"
                                     fontweight="700"
                                     width="80%"

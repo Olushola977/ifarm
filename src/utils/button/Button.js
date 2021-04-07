@@ -12,13 +12,14 @@ function Button({
     fontweight,
     name,
     mx,
+    id,
     ...rest
 }) {
     return (
         <div className="mt-4">
             <button
                 className={`form-control ${mx}`}
-                id= {name}
+                id= {id}
                 {...rest}
                 style=
                 {{
