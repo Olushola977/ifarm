@@ -51,7 +51,7 @@ const Dairy = {
             title: "Banana",
             productName: "Ripe Banana",
             productImg: `${Banana}`
-        },
+        }
     ]
 }
 export default Dairy

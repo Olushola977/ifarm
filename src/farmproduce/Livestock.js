@@ -51,7 +51,7 @@ const Livestock = {
             title: "Banana",
             productName: "Ripe Banana",
             productImg: `${Banana}`
-        },
+        }
     ]
 }
 

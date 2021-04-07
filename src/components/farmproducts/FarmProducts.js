@@ -22,12 +22,19 @@ const settings = {
 function FarmProducts() {
 
     let [display, setDisplay] = useState(false);
+    let [singleProduct, setSingleProduct] = useState({})
 
     const getProductDetail = (id) => {
         Product.forEach((element) => {
-            const prodDetail = element.products.find((prod) => prod.id == id);
-            console.log(prodDetail, "prod detail");
-            return prodDetail;
+            const prodDetail = element.products;
+            const prod = prodDetail.find((prod) => prod.id === id);
+            if(prod) {
+                console.log(prod, "product detail");
+                setSingleProduct(singleProduct = prod);
+                console.log(singleProduct, "single product");
+            } else {
+                return
+            }
         });
     }
 
@@ -35,8 +42,7 @@ function FarmProducts() {
         handleModalOpen();
         const id = e.target.id;
         console.log(id, "id");
-        const singleProduct = getProductDetail(id);
-        console.log(singleProduct, "single product");
+        getProductDetail(id);
     }
 
     const handleModalOpen = () => {
@@ -49,12 +55,14 @@ function FarmProducts() {
 
     return (
         <>
-        {display === true ? (
+        {display === true && singleProduct !== 0 ? (
             <Modal 
                 show="show"
                 close={handleModalClose}    
             >
-                <SingleProduct />
+                <SingleProduct
+                    title={singleProduct.productName}
+                />
             </Modal>
         ) : ""}
             {Product ? Product.map(prod => (

@@ -51,7 +51,7 @@ const Fish = {
             title: "Banana",
             productName: "Ripe Banana",
             productImg: `${Banana}`
-        },
+        }
     ]
 
 }
