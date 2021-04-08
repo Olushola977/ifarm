@@ -1,2 +1,9 @@
 @import 'styles/compiled.scss';
 
+.modal-body {
+    .productImage {
+        img {
+            height: 200px;
+        }
+    }
+}

@@ -6,6 +6,10 @@
 .modal {
     background: #040404c7;
 }
+#exampleModal {
+    overflow-y: scroll;
+    height: 100vh;
+}
 .close {
     span {
         float: right !important;
