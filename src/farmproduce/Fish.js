@@ -7,7 +7,12 @@ const Fish = {
             id: "456780",
             title: "Tomato",
             productName: "Red Tomato",
-            productImg: `${Tomato}`
+            productImg: `${Tomato}`,
+            productPrice: "500",
+            productSellerStatus: "Wholesaler",
+            productDesc: `This Product is grown without Artificial Boosters, Chemical Manure or Colorization. 
+            The above product price is calculated using a 500ml bucket as measurement.`,
+            productStatus: "Wholesale",
         },
 
         {

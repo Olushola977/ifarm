@@ -21,19 +21,21 @@ const settings = {
     slidesToScroll: 0.5
 };
 
+let Cart = [];
 
-function FarmProducts() {
+const FarmProducts = () => {
 
     let [display, setDisplay] = useState(false);
     let [singleProduct, setSingleProduct] = useState({});
     let [dominantColor, setDominantColor] = useState('');
+    let [message, setMessageDisplay] = useState(false);
 
-    const getProductDetail = (id) => {
+    const getProductDetail = (id, action) => {
         Product.forEach((element) => {
             const prodDetail = element.products;
             const prod = prodDetail.find((prod) => prod.id === id);
             if (prod) {
-                setSingleProduct(singleProduct = prod);
+                action(prod);
             } else {
                 return
             }
@@ -43,7 +45,27 @@ function FarmProducts() {
     const handleModalContent = (e) => {
         handleModalOpen();
         const id = e.target.id;
-        getProductDetail(id);
+        try {
+            const action = (prod) => setSingleProduct(singleProduct = prod);
+            getProductDetail(id, action);
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    const handleAddToCart = (e) => {
+        const id = e.target.id;
+        console.log(id);
+        try {
+            const action = (prod) => Cart.push(prod);
+            getProductDetail(id, action);
+            console.log(Cart, "cart");
+            localStorage.setItem('userCart', JSON.stringify(Cart));
+        } catch (error) {
+            console.log(error);
+            return;
+        };
+        setMessageDisplay(message = true);
     }
 
     const handleDominantColor = () => {
@@ -64,7 +86,8 @@ function FarmProducts() {
     }
 
     const handleModalClose = () => {
-        setDisplay(display = false)
+        setDisplay(display = false);
+        setMessageDisplay(message = false)
     }
 
     return (
@@ -74,12 +97,22 @@ function FarmProducts() {
                     show="show"
                     close={handleModalClose}
                 >
+                    {message === true && (
+                        <div className="bg-success mx-4 text-center">
+                            <span className="text-white">Product Added to Cart</span>
+                        </div>
+                    )}
                     <SingleProduct
                         title={singleProduct.productName}
                         productImage={singleProduct.productImg}
                         imageref={imgRef}
+                        price={singleProduct.productPrice}
                         onload={handleDominantColor}
-                        buttonbg={dominantColor}
+                        dynamicbg={dominantColor}
+                        buttonId={singleProduct.id}
+                        productStatus={singleProduct.productStatus}
+                        productDesc={singleProduct.productDesc}
+                        handleAddToCart={handleAddToCart}
                     />
                 </Modal>
             ) : ""}
@@ -88,7 +121,6 @@ function FarmProducts() {
                     <div className="productTitle">
                         <h4> {prod.category} </h4>
                     </div>
-
                     <Slider {...settings}>
 
                         {prod.products ? prod.products.map(prodsub => (
@@ -113,7 +145,6 @@ function FarmProducts() {
                             </ProductCard>
                         )) : ""}
                     </Slider>
-
                 </div>
             )) : ""}
         </>

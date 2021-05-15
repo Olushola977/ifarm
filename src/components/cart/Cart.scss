@@ -1,0 +1,10 @@
+
+.counter{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    p {
+    margin: 0;
+    padding: 5px 0;
+    cursor: pointer;
+}}

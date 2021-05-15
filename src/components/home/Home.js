@@ -1,6 +1,7 @@
 
 import ProductWrapper from 'components/productwrapper';
 import FarmProducts from 'components/farmproducts';
+import Banner from './banner';
 
 /**
  * 
@@ -11,6 +12,7 @@ function Home() {
     return (
         <div className="home">
                 <ProductWrapper>
+                    <Banner />
                     <FarmProducts />
                 </ProductWrapper>
         </div>

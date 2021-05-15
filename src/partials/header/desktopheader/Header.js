@@ -2,12 +2,29 @@
 import Brand from 'partials/brand';
 import './Header.scss';
 import { Link } from 'react-router-dom';
+import Cart from 'partials/carticon';
+import { useEffect, useState } from 'react';
 
 /**
  * Header Component
  */
 
-function Header() {
+
+const Header = () => {
+
+    let [cartCount, setCartCount] = useState([]);
+
+    useEffect(() => {
+        let usercart = JSON.parse(localStorage.getItem('userCart'));
+        console.log(usercart, "header cart");
+        if(usercart === null) {
+            return;
+        } else {
+            setCartCount(cartCount = usercart.length);
+            console.log(cartCount, "header cartcount")
+        }
+    }, [cartCount]);
+
     return (
         <nav className="header">
             <div className="container-fluid">
@@ -25,9 +42,13 @@ function Header() {
                             </ul>
                         </div>
                     </div>
-                    <div className="col-lg-2 ml-auto">
+                    <div className="col-lg-3 ml-auto">
                         <div className="navItemTwo">
                             <div className="authLink d-flex justify-content-center">
+                                <Cart
+                                    cartlink="/ifarm/cart"
+                                />
+                                <p> {cartCount} </p>
                                 <div className="authLinkLogin">
                                     <Link to="/auth/login">Login</Link>
                                 </div>
