@@ -1,5 +1,44 @@
 @import 'styles/compiled.scss';
 
+.mbmenu {
+    height: 100%;
+    width: 60%;
+    background: rgb(1, 85, 19);
+    z-index: 999;
+    top: 0;
+    right: 0;
+    padding: 0px 15px;
+    position: fixed;
+    animation: slide .75s ease-in;
+}
+.lgmenu {
+    width: 90%;
+}
+@keyframes slide {
+    0% {
+        width: 0%;
+        opacity: 0;
+    }
+    100% {
+        width: 75%;
+        opacity: 1;
+    }
+}
+.smnavItem {
+    ul {
+        padding: 10px 0 0 0;
+        margin: 0;
+        line-height: 40px;
+        li {
+            list-style-type: none;
+            padding: 0;
+            border-bottom: 1px dashed grey;
+            a {
+                color: #fff;
+            }
+        }
+    }
+}
 .navItem {
 
     ul {
@@ -11,6 +50,7 @@
             li {
                 list-style-type: none;
                 padding: 0;
+                margin: 0 3px;
                 a {
                     color: $Dark;
                     &:hover {
@@ -46,4 +86,10 @@
     height: 16px;
     min-width: 16px;
     text-align: center;
+}
+
+@media only screen and (min-width: 992px) {
+    .navItem ul li {
+        margin: 0 15px;
+    }
 }

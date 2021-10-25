@@ -11,9 +11,9 @@ import Banner from './banner';
 function Home() {
     return (
         <div className="home">
+            <Banner />
                 <ProductWrapper>
-                    <Banner />
-                    <FarmProducts />
+                    <FarmProducts home />
                 </ProductWrapper>
         </div>
     )

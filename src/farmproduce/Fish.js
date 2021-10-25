@@ -13,6 +13,7 @@ const Fish = {
             productDesc: `This Product is grown without Artificial Boosters, Chemical Manure or Colorization. 
             The above product price is calculated using a 500ml bucket as measurement.`,
             productStatus: "Wholesale",
+            productQty: "1"
         },
 
         {

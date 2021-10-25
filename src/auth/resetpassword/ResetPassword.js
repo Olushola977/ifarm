@@ -28,6 +28,7 @@ function ResetPassword() {
                                 colour="#fff"
                                 fontsize="16px"
                                 fontweight="600"
+                                additionalClass="mt-3"
                             />
                     </form>
                 </div>

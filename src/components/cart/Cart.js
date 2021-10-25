@@ -23,7 +23,7 @@ const Cart = () => {
                     <div className="cart">
                         <h5>Cart</h5>
                         <div style={{
-                            boxShadow: "rgb(0 0 0) 1px 1px 1px 0px",
+                            background: "#80808017",
                             padding: "3px 5px"
                         }}>
 
@@ -53,7 +53,10 @@ const Cart = () => {
                                                 style={{ maxWidth: "100%", whiteSpace: "pre" }}
                                             > {obj.productDesc} </p>
                                             <span> <del>N</del> {obj.productPrice} </span>
-                                            <span> {obj.productQty} </span>
+                                        </div>
+                                        <div className="text-center mx-auto"> 
+                                            Qty
+                                            <p>{obj.productQty}</p> 
                                         </div>
                                         <div
                                             className="counter"
@@ -90,6 +93,7 @@ const Cart = () => {
                                     fontweight="700"
                                     width="40%"
                                     mx="ml-auto"
+                                    additionalClass="my-3"
                                 />
                             )}
                         </div>

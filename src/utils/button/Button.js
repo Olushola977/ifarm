@@ -13,12 +13,12 @@ function Button({
     name,
     mx,
     id,
+    additionalClass,
     ...rest
 }) {
     return (
-        <div className="mt-4">
             <button
-                className={`form-control ${mx}`}
+                className={`form-control ${mx} ${additionalClass}`}
                 id= {id}
                 {...rest}
                 style=
@@ -33,7 +33,6 @@ function Button({
                 }}>
                 {name}
             </button>
-        </div>
     )
 }
 
